@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-icons.css">
+    <title>後台登入</title>
+</head>
+<body>
+    <h1 class="p-3 ps-5">suiio</h1>
+    <div class="container">
+        <div class="p-4 mx-auto" style="max-width: 500px;">
+            <h5>登入</h5>
+            <form class="row g-3 my-3" id="login">
+                <div class="col-12">
+                    <label for="acc" class="form-label">帳號</label>
+                    <input type="text" class="form-control" name="acc" id="acc" maxlength="30" required>
+                </div>
+                <div class="col-12">
+                    <label for="pw" class="form-label">密碼</label>
+                    <input type="password" class="form-control" name="pw" id="pw" maxlength="30" required>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary w-100">登　入</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery-3.6.0.js"></script>
+    <script>
+        $("#login").submit((e) => { 
+            e.preventDefault();
+            let acc = $("#acc").val();
+            let pw = $("#pw").val();
+            if(acc == "suiio" && pw == "1234"){
+                alert("登入成功");
+                location.href = "manage.html";
+            }else{
+                alert("帳號或密碼錯誤");
+                location.href = "";
+            }
+        });
+    </script>
+</body>
+</html>

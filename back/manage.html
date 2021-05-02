@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-icons.css">
+    <title>後台管理</title>
+</head>
+<body>
+    <h1 class="p-5">
+        suiio
+        <a class="btn float-end" href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+            </svg>
+        </a>
+    </h1>
+    <div class="container">
+        <div class="my-4">
+            <div>
+                <h3>新聞管理</h3>
+            </div>
+            <div class="border border-dark p-1 table-responsive" style="height: 400px;">
+                <table class="table text-nowrap align-middle">
+                    <thead>
+                        <tr>
+                            <th>日期</th>
+                            <th>標題</th>
+                            <th>來源</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="news">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="my-4">
+            <h3>回報系統</h3>
+            <div class="border border-dark p-1 table-responsive" style="height: 400px;">
+                <table class="table text-nowrap align-middle">
+                    <thead>
+                        <tr>
+                            <th>日期</th>
+                            <th>回報人</th>
+                            <th>電話</th>
+                            <th>地區</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="report">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="my-4">
+            <h3>天蝗出巡</h3>
+            <div class="row">
+                <div class="col-8">
+                   <img class="img-fluid w-100" src="../img/map.jpg" alt="map">
+                </div>
+                <div class="col-4">
+                    <div class="w-100">
+                       目前天氣：<i class="bi bi-sun-fill fs-3 text-warning"></i>
+                    </div>
+                    <div class="row w-100">
+                        <div class="col">
+                            目前狀態：<i class="bi bi-briefcase-fill text-success me-2"></i>出勤中
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-outline-danger float-end">回巢</button>
+                        </div>
+                    </div>
+                    <div class="row w-100 mt-3 mb-1">
+                        <div class="col-auto">
+                            巡邏模式：
+                        </div>
+                        <div class="col">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>環狀</option>
+                                <option value="1">八字</option>
+                                <option value="2">隨機</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="border border-dark p-1 table-responsive mb-3" style="height: 400px;">
+                        <table class="table text-nowrap align-middle">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>期間</th>
+                                </tr>
+                            </thead>
+                            <tbody id="report">
+                                <tr>
+                                    <td>
+                                        <input class="form-check-input" type="checkbox" value="" checked>
+                                    </td>
+                                    <td>
+                                        06:00～07:00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input class="form-check-input" type="checkbox" value="" checked>
+                                    </td>
+                                    <td>
+                                        07:00～08:00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input class="form-check-input" type="checkbox" value="">
+                                    </td>
+                                    <td>
+                                        08:00～09:00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input class="form-check-input" type="checkbox" value="" checked>
+                                    </td>
+                                    <td>
+                                        09:00～10:00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input class="form-check-input" type="checkbox" value="">
+                                    </td>
+                                    <td>
+                                        10:00～11:00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input class="form-check-input" type="checkbox" value="" checked>
+                                    </td>
+                                    <td>
+                                        11:00～12:00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input class="form-check-input" type="checkbox" value="">
+                                    </td>
+                                    <td>
+                                        12:00～13:00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input class="form-check-input" type="checkbox" value="" checked>
+                                    </td>
+                                    <td>
+                                        13:00～14:00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input class="form-check-input" type="checkbox" value="" checked>
+                                    </td>
+                                    <td>
+                                        14:00～15:00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input class="form-check-input" type="checkbox" value="">
+                                    </td>
+                                    <td>
+                                        15:00～16:00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input class="form-check-input" type="checkbox" value="" checked>
+                                    </td>
+                                    <td>
+                                        16:00～17:00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input class="form-check-input" type="checkbox" value="">
+                                    </td>
+                                    <td>
+                                        17:00～18:00
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="w-100">
+                        <button type="button" class="btn btn-outline-success w-100">更新排程</button>
+                    </div>
+               </div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery-3.6.0.js"></script>
+    <script>
+        $.getJSON("news.json", null, (res) => {
+            let cnt = 0;
+            let news = res.news.map(x => x);
+            news.forEach(element => {
+                console.log(element);
+                $("#news").append(
+                    $("<tr></tr>").append(
+                        $("<td></td>").text(element.date),
+                        $("<td></td>").text(element.title),
+                        $("<td></td>").text(element.from),
+                        $("<td></td>").append(
+                            $("<button></button>")
+                                .addClass("btn-close")
+                                .attr("id", "news_d")
+                        )
+                    )
+                );
+            });
+        });
+        $.getJSON("form.json", (res) => {
+            let cnt = 0;
+            let row = null;
+            let form = res.form.map(x => x);
+            form.forEach(element => {
+                console.log(element);
+                $("#report").append(
+                    $("<tr></tr>").append(
+                        $("<td></td>").text(element.date),
+                        $("<td></td>").text(element.name),
+                        $("<td></td>").text(element.phone),
+                        $("<td></td>").text(element.city + " " + element.district),
+                        $("<td></td>").append(
+                            $("<button></button>")
+                                .addClass("btn text-success")
+                                .html('<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg>'),
+                            $("<button></button>")
+                                .addClass("btn-close")
+                                .attr("id", "news_d")
+                        )
+                    )
+                );
+            });
+
+        });
+        $(document).on('click', '#news_d', function(event) {
+            if(confirm("確定刪除?")) {
+                console.log(this);
+                $(this).parent().parent().remove();
+            }
+        });
+    </script>
+</body>
+</html>

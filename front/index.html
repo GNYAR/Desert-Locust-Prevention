@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-icons.css">
+    <title>suiio</title>
+    <style>
+        #nav-tab .active{
+            background-color: #212529 !important;
+            color: #fff !important;
+        }
+        .btn_position {
+            opacity: 0;
+            margin-left: 1px;
+            bottom: 0;
+        }
+        .news_img {
+            filter: brightness(.5);
+            height: 400px;
+        }
+        .news_font {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav nav-pills flex-column flex-sm-row bg-dark sticky-top">
+        <a class="flex-sm-fill text-sm-center nav-link py-5 text-light rounded-0 fs-5" id="about">認識蝗蟲</a>
+        <a class="flex-sm-fill text-sm-center nav-link py-5 text-light rounded-0 fs-5" id="news">蝗室新聞</a>
+        <div class="flex-sm-fill text-sm-center py-4 fs-1 text-light rounded-0 fs-5">suiio</div>
+        <a class="flex-sm-fill text-sm-center nav-link py-5 text-light rounded-0 fs-5" id="map">蝗金地圖</a>
+        <a class="flex-sm-fill text-sm-center nav-link py-5 text-light rounded-0 fs-5" id="report">足跡通報</a>
+    </nav>
+    <div class="w-100 overflow-hidden position-relative">
+        <img class="w-100 img-fluid" src="../img/03.jpg" style="filter: blur(5px) saturate(200%); transform: scale(1.02)">
+        <div class="position-absolute top-0 start-50 translate-middle-x mt-5">
+            <div class="container text-light">
+                <h1 class="p-1 px-3 bg-dark" style="box-shadow: 8px 7px 0px;" id='a'>關於沙漠蝗蟲</h1>
+                <nav class="mt-4">
+                    <div class="nav nav-tabs bg-light" id="nav-tab" role="tablist">
+                      <button class="nav-link flex-fill rounded-0 active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">簡介</button>
+                      <button class="nav-link flex-fill rounded-0" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">災情</button>
+                      <button class="nav-link flex-fill rounded-0" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">影響</button>
+                    </div>
+                </nav>
+                <div class="tab-content mt-2 text-dark" id="nav-tabContent" style="text-shadow: 5px 5px 5px white;">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <p>沙漠蝗蟲（學名：Schistocerca gregaria）是蝗蟲科一種棲息在沙漠的短角蝗蟲。沙漠蝗災已經威脅了非洲、中東和亞洲的農業數世紀。全世界至少有十分之一人口的生計都會受到這種饑食昆蟲影響。</p>
+                        <p>沙漠蝗蟲可能是蝗蟲類中最危險的一種，因為這種蝗蟲的蝗蟲群能夠迅速飛到遙遠距離。每年至少會生兩到五代蝗蟲。雖然僅憑沙漠蝗蟲不會造成飢荒，但它可能是重要的促成因素。</p>
+                        <!-- modal_button -->
+                        <div class="d-flex justify-content-end" style="margin-top: 10px;">
+                            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#introduction">MORE</button>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                        <p>據估計，沙漠蝗蟲每天在綠色植被中消耗相當於它們的體重(2 g（0.07 oz）)它們是草食性，以葉，枝，花，果實，種子，莖和樹皮為食。 幾乎所有農作物和非農作物都被此蝗蟲饞食，包括花生、玉米、高粱、大麥、大米、牧草、甘蔗、棉、果樹、大棗、蕉、蔬菜和雜草。一平方公里的蝗蟲群，一天能吃掉大約35000人數量的食物。</p>
+                        <!-- modal_button -->
+                        <div class="d-flex justify-content-end" style="margin-top: 10px;">
+                            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#disaster">MORE</button>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                        <p>影響蝗蟲形成的兩個重要條件是氣溫和降雨。世界氣象組織（World Meteorological Organization，WMO）報告指出，過去的 5 年（2015-2019）是有記錄以來最熱的 5 年，2019 年是史上第二熱的年份。非洲作為氣候、環境脆弱地區，也是全球受氣候變遷影響最為顯著的區域之一。隨著溫度的升高，在土壤中孵化的蝗蟲卵的平均孵化週期以及幼蟲的生長週期都會變短，種群繁殖速度加快。</p>
+                        <!-- modal_button -->
+                        <div class="d-flex justify-content-end" style="margin-top: 10px;">
+                            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#affect">MORE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container text-light mt-5">
+                <h1 class="p-1 px-3 bg-dark" style="box-shadow: 5px 10px 0px;" id='n'>蝗室新聞</h1>
+            </div>
+            <div id="carouselExampleControls" class="carousel slide mt-5" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row" style="--bs-gutter-x: 0 !important;">
+                      <div class="card col-4 p-0">
+                        <img class="card-img-top news_img w-100 h-100" src="img/news1.png" alt="Card image">
+                        <div class="card-img-overlay news_font">
+                          <h4 class="card-title">乾旱是福是禍？春雨不來非洲蝗災有解</h4>
+                          <p class="card-text">去年東非蝗蟲災害堪稱是 25 年來最嚴重的一次，影響 23 個國家。
+                            今年是東非蝗蟲爆發持續的第二年，隨著東非播種季節的開始，農民擔憂蝗害將再度侵蝕農作物，
+                            但蝗蟲需要水才能繁殖，還好今年春雨不來，乾旱為蝗蟲防治帶來一些曙光。
+                          </p>
+                          <button type="button" class="btn btn-secondary btn_position stretched-link" data-bs-toggle="modal" data-bs-target="#news1"></button>
+                        </div>
+                      </div>
+                      <div class="card col-4 p-0">
+                        <img class="card-img-top news_img" src="img/news6.png" alt="Card image">
+                        <div class="card-img-overlay news_font">
+                          <h4 class="card-title">蝗蟲大軍逼近 印度西5邦已重創</h4>
+                          <p class="card-text">正當全球關注於新型冠狀病毒（Coronavirus）之際，漫天飛舞的蝗蟲（locust）大軍，
+                            已將強大破壞力帶往印度，將當地大面積糧食作物“一掃而空”，讓印度頓時陷入嚴重糧食供應危機。
+                            此前消息報道印度接壤的巴基斯坦等受蝗蟲威脅嚴重。
+                          </p>
+                          <button type="button" class="btn btn-secondary btn_position stretched-link" data-bs-toggle="modal" data-bs-target="#news2"></button>
+                        </div>
+                      </div>
+                      <div class="card col-4 p-0">
+                        <img class="card-img-top news_img" src="img/news7.png" alt="Card image">
+                        <div class="card-img-overlay news_font">
+                          <h4 class="card-title">【蝗蟲災害】上海發現蝗蟲藏身貨物 中國6月恐進入蝗災高風險期</h4>
+                          <p class="card-text">新冠肺炎疫情尚未結束，第二波非洲蝗災再來襲。此次非洲蝗蟲數量約為第一波的20倍，
+                            目前受災地區主要為東非5國，致使非洲2000萬人陷入困境。中國農業科學院植物保護研究所研究員張澤華表示，
+                            6月中國或進入非洲蝗災高風險期，目前上海海關已經發現有藏在貨物中的蝗蟲，「說明蝗蟲已經開始敲我們的大門了」。
+                          </p>
+                          <button type="button" class="btn btn-secondary btn_position stretched-link" data-bs-toggle="modal" data-bs-target="#news3"></button>
+                        </div>
+                      </div>
+                      <!-- <div class="card col-3 p-0">
+                        <img class="card-img-top news_img" src="img/news4.png" alt="Card image">
+                        <div class="card-img-overlay news_font">
+                          <h4 class="card-title">印度面臨30年來最嚴重蝗災，主因是印度洋暖化？</h4>
+                          <p class="card-text">今年全球兩起影響最巨的災難，除了新型冠狀病毒，另一個就是蝗災。去年底聯合國就已發出蝗災警報，
+                            當時印度銜接巴基斯坦的地區就出現首批異常蝗蟲群，今年隨著氣候持續異常及印度正在對抗新冠疫情分身乏術，
+                            專家預計今年印度將面臨1993年以來最嚴重的蝗蟲侵襲。
+                          </p>
+                          <button type="button" class="btn btn-secondary btn_position stretched-link" data-bs-toggle="modal" data-bs-target="#news4"></button>
+                        </div>
+                      </div> -->
+                    </div>
+                  </div>
+            
+                  <div class="carousel-item">
+                    <div class="row" style="--bs-gutter-x: 0 !important;">
+                      <div class="card col-4 p-0">
+                        <img class="card-img-top news_img" src="img/news5.png" alt="Card image">
+                        <div class="card-img-overlay news_font">
+                          <h4 class="card-title">水旱災、疫情、蝗害接連侵襲 外媒曝中國糧食危機現況</h4>
+                            <p class="card-text">〔即時新聞／綜合報導〕中國當前面臨嚴重的糧食危機，國家主席習近平上月下令禁止浪費食物，
+                            外媒指出，繼武漢肺炎（新型冠狀病毒病，COVID-19）疫情、沙漠蝗蟲及梅雨重災後，目前中國又面臨新種蝗災，
+                            糧食危機恐越演越烈。
+                          </p>
+                          <button type="button" class="btn btn-secondary btn_position stretched-link" data-bs-toggle="modal" data-bs-target="#news5"></button>
+                        </div>
+                      </div>
+                      <div class="card col-4 p-0">
+                        <img class="card-img-top news_img" src="img/news6.png" alt="Card image">
+                        <div class="card-img-overlay news_font">
+                          <h4 class="card-title">東非蝗災越演越烈，大批沙漠蝗蟲已入侵印度</h4>
+                          <p class="card-text">去年誕生的大災情不僅有武漢肺炎，還有東非蝗災，且情勢已越發嚴重，
+                            如位於印度半島的巴基斯坦政府已宣布進入國家緊急狀態，印度將會是接下來亞洲的重要防線。
+                            這可能是東非地區 25 年以來最嚴重的一次蝗蟲災害，3,600 多億隻蝗蟲不僅席捲索馬利亞、肯亞及衣索比亞，更將迅速湧入其他國家。
+                          </p>
+                          <button type="button" class="btn btn-secondary btn_position stretched-link" data-bs-toggle="modal" data-bs-target="#news6"></button>
+                        </div>
+                      </div>
+                      <div class="card col-4 p-0">
+                        <img class="card-img-top news_img" src="img/news7.png" alt="Card image">
+                        <div class="card-img-overlay news_font">
+                          <h4 class="card-title">【東非蝗災】沙漠蝗蟲有多可怕？專家：蝗蟲災害恐更常見</h4>
+                          <p class="card-text">東非蝗災肆虐，大部分地區遭大量沙漠蝗蟲侵襲，威脅糧食安全。專家預測，蝗災在未來恐怕只會愈來愈常見。
+                            聯合國警告，蝗蟲在糧食安全脆弱的索馬里、埃塞俄比亞和肯亞破壞農作物，已出現糧食危機。蝗災不僅於非洲發生，
+                            沙特阿拉伯和巴基斯坦亦湧現蝗蟲。
+                          </p>
+                          <button type="button" class="btn btn-secondary btn_position stretched-link" data-bs-toggle="modal" data-bs-target="#news7"></button>
+                        </div>
+                      </div>
+                      <!-- <div class="card col-3 p-0">
+                        <img class="card-img-top news_img" src="img/news8.png" alt="Card image">
+                        <div class="card-img-overlay news_font">
+                          <h4 class="card-title">【蝗蝗不安】從東非蝗災看蝗蟲如何成為威脅全球糧食安全的災害？</h4>
+                          <p class="card-text">聯合國糧食及農業組織（FAO）將2020年定調為植物健康年，
+                            卻不料2月底東非爆發一場25年來前所未見的嚴重蝗災，大範圍地影響東非30國，
+                            當地各國政府甚至公告進入「國家緊急狀態」，與此同時，FAO亦宣布東非蝗災進入橙色警戒。
+                          </p>
+                          <button type="button" class="btn btn-secondary btn_position stretched-link" data-bs-toggle="modal" data-bs-target="#news8"></button>
+                        </div>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+            
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev" style="width: 5% !important;">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next" style="width: 5% !important;">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </a>
+              </div>
+        </div>        
+    </div>
+    <div class="w-100 overflow-hidden position-relative">
+        <img class="w-100 img-fluid" src="../img/06.jpg" style="filter: blur(5px) saturate(200%); transform: scale(1.02)">
+        <div class="position-absolute top-0 start-50 translate-middle-x mt-5">
+            <div class="container text-dark">
+                <h1 class="p-1 px-3 bg-light" style="box-shadow: 10px 5px 0px;" id='m'>蝗金地圖</h1>
+                <div class="mt-4">
+                    <div class="fs-5 m-3" style="text-shadow: 5px 5px 5px white;">本週出沒地點</div>
+                    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1C5-cL0UuplMQop-to4054iEKp7ynfDLw" width="740" height="500"></iframe>
+                </div>
+            </div>
+            <div class="container text-dark mt-5">
+                <h1 class="p-1 px-3 bg-light" style="box-shadow: 10px 5px 0px;" id='r'>足跡通報</h1>
+                <div class="mt-5 p-3 bg-light">
+                    <form class="needs-validation " novalidate>
+                        <h3>回報人資訊</h3>
+                        <div class="row g-4 mb-5">
+                            <div class="col-6">
+                                <label class="form-label" for="name">姓名</label>
+                                <input type="text" class="form-control" id="name" placeholder="王小明" required>
+                                <div class="valid-feedback">
+                                Looks good!
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label" for="tel">電話</label>
+                                <input type="tel" class="form-control" id="tel" placeholder="09xx-xxx-xxx" required>
+                                <div class="valid-feedback">
+                                Looks good!
+                                </div>
+                            </div>
+                            <div class="col-12" style="margin-bottom: 10px;">
+                                <label class="form-label" for="email">電子信箱</label>
+                                <input type="email" class="form-control" id="email" placeholder="example@example.con" required>
+                                <div class="valid-feedback">
+                                Looks good!
+                                </div>
+                            </div>
+                        </div>
+                        <h3>發現地區</h3>
+                        <div class="row g-4 mb-5">
+                            <div class="col-6">
+                                <label class="form-label" for="city">縣市</label>
+                                <select class="form-select" id="city">
+                                    <option value="1" selected>台北市</option>
+                                    <option value="2">新北市</option>
+                                    <option value="3">桃園縣</option>
+                                    <option value="4">新竹市</option>
+                                    <option value="5">新竹縣</option>
+                                    <option value="6">苗栗縣</option>
+                                    <option value="7">台中市</option>
+                                    <option value="8">彰化縣</option>
+                                    <option value="9">南投縣</option>
+                                    <option value="10">雲林縣</option>
+                                    <option value="11">嘉義市</option>
+                                    <option value="12">嘉義縣</option>
+                                    <option value="13">台南市</option>
+                                    <option value="14">高雄市</option>
+                                    <option value="15">屏東縣</option>
+                                    <option value="16">台東縣</option>
+                                    <option value="17">花蓮縣</option>
+                                    <option value="18">宜蘭縣</option>
+                                    <option value="19">澎湖縣</option>
+                                    <option value="20">金門縣</option>
+                                    <option value="21">連江縣</option>
+                                    <option value="22">基隆市</option>
+                                </select>
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label" for="block">鄉/鎮/市/區</label>
+                                <select class="form-select" id="block">
+                                    <option value="1" selected>北區</option>
+                                    <option value="2">中區</option>
+                                    <option value="3">南區</option>
+                                    <option value="4">東區</option>
+                                    <option value="5">西區</option>
+                                </select>
+                            </div>
+                        </div>
+                        <h3>照片</h3>
+                        <div class="mb-5">
+                            <label for="formFileMultiple" class="form-label">請提供蝗蟲出沒地區的相關圖片</label>
+                            <input class="form-control" type="file" id="formFileMultiple" multiple>
+                          </div>
+                        <h3>敘述</h3>
+                        <textarea class="form-control mb-5" name="Narrate" id="Narrate"></textarea>
+                        <div class="d-flex justify-content-end" style="margin-top: 10px;">
+                            <button class="btn btn-dark" type="submit">送出</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal -->
+                <!-- introduction -->
+                <div class="modal fade text-dark" id="introduction" tabindex="-1" aria-labelledby="introductionTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h2 class="modal-title" id="introductionTitle">簡介</h2>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                              <p>沙漠蝗蟲（學名：Schistocerca gregaria）是蝗蟲科一種棲息在沙漠的短角蝗蟲。沙漠蝗災已經威脅了非洲、中東和亞洲的農業數世紀。全世界至少有十分之一人口的生計都會受到這種饑食昆蟲影響。</p>
+                              <p>沙漠蝗蟲可能是蝗蟲類中最危險的一種，因為這種蝗蟲的蝗蟲群能夠迅速飛到遙遠距離。每年至少會生兩到五代蝗蟲。雖然僅憑沙漠蝗蟲不會造成飢荒，但它可能是重要的促成因素。</p>
+                              
+                              <h3>生命週期</h3>
+                              <p>沙漠蝗蟲的生命週期分為三個階段：卵、若蟲和有翅成蟲。 當一隻成熟的雄性會跳到一隻成熟的雌性的背部並用雙腿抓住她的身體進行交配。 精子從公蝗蟲的腹部尖端移到母蝗蟲的腹部存儲。這個過程需要幾個小時，一次授精足以使大量的卵受精。</p>
+                              <p>雌性然後尋找合適的軟土來產卵。卵孵化需要合適的溫度和濕度，並且要接近於其他在正在產卵雌性。這時雌性蝗蟲會用腹部探查土壤挖洞，其中可容納多達一百個顆卵的卵莢，然後尋找合適的軟土來產卵。蛋莢長3至4 cm（1.2至1.6英寸）長，下端大約在10公分（3.9英寸）下的地面。卵被泡沫包圍，並硬化成膜並堵塞了蛋莢上方的孔。卵吸收周圍土壤中的水分。卵孵化前的潛伏期可能是兩週或更長時間，取決於環境和溫度。</p>
+                              <p>剛孵化的若蟲馬上就會開始覓食，並且如果是聚集型的個體的話，就會被其他若蟲所吸引，並且它們會聚成一大群蟲群。 隨著若蟲的生長，需要蛻變（脫落其外骨骼）。 新的外骨骼仍然柔軟時，它的硬質表皮裂開並且其身體膨脹。沙漠蝗蟲若蟲在成蟲前將需經5次換羽。不成熟和成熟的若蟲個體在群居階段會形成帶，以內聚單位的形式進食、曝曬和移動，而散居型的若蟲個體則不尋求群居。</p>
+                              <p>在第五次蛻變後，該個體蝗蟲快要成蟲，但是尚未完全成蟲。起初是柔軟的，粉紅色，翅膀下垂，但是在幾天的發育中，表皮變硬，這時血淋巴灌入身體裡使蝗蟲翅膀變硬。當食物供應和氣候條件合適時，成蟲期可能會在兩至四個星期內完成，但如果環境條件不理想，則可能將會長達六個月成蟲。雄性首先開始成蟲，並散發出刺激雌性成蟲的氣味。沙漠蝗蟲成蟲後變黃，雌蟲的腹部開始隨著卵的發育而腫脹。</p>
+                          
+                              <h3>生態及群型</h3>
+                              <p>沙漠蝗蟲有散居型和聚集型兩種型態，為非遺傳多型性。研究顯示散居型的蝗蟲若蟲和成蟲在擁擠的環境中幾小時內就會表現出聚集型化的行為，而孤立地飼養聚集型蝗蟲(成蟲)則需要經過一個或多個世代才能變回散居型。這兩個型態在生物形態學和行為方面上存在著差異。在散居型態時，蝗蟲若蟲不會聚集成帶，而是獨立移動。在後來的齡期中它們的顏色會趨向於綠色或棕色，以與牧草的顏色匹配。成蟲在夜間飛行，並因此有著相應的體色以使其融入周圍環境，未成熟成蟲的體色為灰色或米色，完全成熟成蟲的體色為淡黃色。在聚集型態時，蝗蟲若蟲會聚集在一起，並且在接下來的齡期中，演變出以黃色為背景並帶有黑色標記的明顯體色。未成熟成蟲的體色為粉紅色，完全成熟成蟲的體色為鮮黃色，並且會在白天密集的成群飛翔。</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- disaster -->
+              <div class="modal fade text-dark" id="disaster" tabindex="-1" role="dialog" aria-labelledby="disasterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-lg" role="document">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h2 class="modal-title" id="disasterTitle">災情</h2>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                              <p>據估計，沙漠蝗蟲每天在綠色植被中消耗相當於它們的體重(2 g（0.07 oz）)它們是草食性，以葉，枝，花，果實，種子，莖和樹皮為食。 幾乎所有農作物和非農作物都被此蝗蟲饞食，包括花生、玉米、高粱、大麥、大米、牧草、甘蔗、棉、果樹、大棗、蕉、蔬菜和雜草。[3]一平方公里的蝗蟲群，一天能吃掉大約35000人數量的食物。</p>
+                              <p>聖經和古蘭經中提到了蝗蟲造成的農作物損失的災情； 這些昆蟲記錄為造成許多嚴重衣索比亞飢荒的原因其一。 自20世紀以來重大沙漠蝗蟲蝗災在1926-1934年、1940-1948年、1949-1963年、1967-1969年、1987-1989年和2003-2005年。1915年3月至10月，蝗災肆虐巴勒斯坦，幾乎消滅了巴勒斯坦所有植被。[5]2020年1月到2月發生在東非的蝗災亦造成了重大的損失。沙漠蝗蟲蝗群造成的大量農作物損失加劇了糧食短缺問題，並威脅到糧食安全。</p>
+                              <p>影響蝗蟲形成的兩個重要條件是氣溫和降雨。世界氣象組織（World Meteorological Organization，WMO）報告指出，過去的 5 年（2015-2019）是有記錄以來最熱的 5 年，2019 年是史上第二熱的年份。非洲作為氣候、環境脆弱地區，也是全球受氣候變遷影響最為顯著的區域之一。隨著溫度的升高，在土壤中孵化的蝗蟲卵的平均孵化週期以及幼蟲的生長週期都會變短，種群繁殖速度加快。</p>
+                              <p>在全球氣溫顯著上升的同時，氣旋風暴等極端氣候事件的發生頻率增加。2018 年 5 月和 10 月，連續兩場氣旋風暴（Mekunu 和 Luban）給紅海沿岸沙漠蝗蟲的繁殖區域帶來了大量降水，使得原本處在退縮期的物種群快速繁殖生長，並集聚成群開始遷徙。</p>
+                              <p>再加上從 2019 年 10 月以來，非洲之角（The Horn of Africa）遇到了有史以來最為濕潤的雨季，12 月氣旋風暴Pawan再次襲擊非洲東海岸，帶來大量異常降水。充沛的雨水和植被生長為蝗蟲卵孵化及幼蟲發育提供了水熱條件及食物來源，進一步加劇了蝗蟲災害的爆發。</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- affect -->
+              <div class="modal fade text-dark" id="affect" tabindex="-1" role="dialog" aria-labelledby="affectTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-lg" role="document">
+                      <div class="modal-content">
+                              <div class="modal-header">
+                              <h2 class="modal-title" id="affectTitle">影響</h2>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                              <h3>氣候變遷帶來的糧食危機不止蝗災</h3>
+                              <p>氣候變遷對糧食安全的影響不止停留在蝗蟲帶來的糧食損失。氣候變遷導致的溫度和降雨變化、極端氣候事件的發生頻率加劇，引發乾旱、洪澇、水質變化、病蟲害等，使得全球糧食生產、質量、收成和分配等各個環節受到前所未有的挑戰。</p>
+                              <p>聯合國政府間氣候變遷專門委員會（IPCC）2019年發布的《氣候變遷與土地報告》中指出，1981 至 2010 年，全球玉米、小麥和大豆的平均產量在氣候變遷的影響下，已經分別減少了 4.1%、1.8% 和 4.5%。研究人員預測到2050年，如果不採取有效的因應措施，氣候變遷將導致全球糧食產能下降 5% 至 30%。</p>
+                              <p>很多專家已經表明，由於中國大陸的生態屏障保護，此次蝗蟲危機不會產生威脅。但氣候變遷作為全球性的環境事件，對糧食安全帶來的影響是任何一個國家都需要應對的。</p>
+                              <p>中國大陸與印度等都是農業生產大國，也同時是氣候脆弱國家。在氣候加速變遷的情境下，洪澇、乾旱、農業病蟲害等與氣候變遷密切相關的事件，正在威脅著幾十億人的糧食安全，帶來的損失甚至遠超於這次非洲的蝗災。</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+        <div class="modal fade bd-example-modal-xl" id="news1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <div style="display: block;">
+                    <h3 class="modal-title" id="exampleModalLabel">乾旱是福是禍？春雨不來非洲蝗災有解</h3>
+                    <h6>作者 黃 嬿 | 發布日期 2021 年 04 月 09 日 13:54|</h6>
+                  </div>
+                  
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  去年東非蝗蟲災害堪稱是 25 年來最嚴重的一次，影響 23 個國家。
+                  今年是東非蝗蟲爆發持續的第二年，隨著東非播種季節的開始，農民擔憂蝗害將再度侵蝕農作物，
+                  但蝗蟲需要水才能繁殖，還好今年春雨不來，乾旱為蝗蟲防治帶來一些曙光。<br><br>
+                  根據聯合國數據，當前的蝗蟲高潮始於 2018 年，當時熱帶氣旋讓阿拉伯半島非常潮濕，
+                  為孵化沙漠蝗蟲留下完美條件。當年大量蝗蟲遍布沙特阿拉伯、葉門和伊朗。
+                  隨著風吹過紅海，2019 年中降落在非洲之角。<br><br>
+                  偏偏 2019 年同時也是東非最潮濕的年份之一，也加速蝗蟲的繁殖速度。
+                  2020 年的前幾個月，肯亞、衣索比亞、索馬利亞、蘇丹和厄利垂亞遍布大批災民。
+                  據東非區域機構政府間發展管理局稱，沙漠蝗蟲對以農業為基礎的生計和糧食安全構成前所未有的風險。
+                  一平方公里大小的蝗蟲一天可以吃掉 3.5 萬人的食物。
+                  自 2019 年底以來，大舉入侵的蝗蟲開始破壞東非的農作物，使約 3,200 萬人口處於飢餓危機中。
+                  世界銀行預測，2020 年，蝗蟲造成的破壞和損失可能達到 85 億美元。<br><br>
+                  對肯亞而言，2019 年開始的這波蝗災是 70 年來最嚴重的一次，政府無計可施，由於蝗蟲出現地方多半都在無人居住地區，只好大量噴灑殺蟲劑應對。
+                  在肯亞有一些非營利機構鼓勵民眾抓蝗蟲來換錢，他們把這些蝗蟲製成魚或動物飼料，但是聯合國糧農組織警告，由於殺蟲劑疑慮，不要將蝗蟲用作飼料。<br><br> 
+                  去年 11 月，第二波蝗蟲襲擊肯亞，這些蝗蟲開始往人類居住區登陸，由於使用殺蟲劑會威脅人畜安全，
+                  因此對抗蝗災的任務比往年更困難。還好這個被聯合國比喻為聖經規模的禍害，終於迎來一些好消息。
+                  由於今年春雨減少，不利蝗蟲繁殖。<br><br>
+                  糧農組織表示，蝗蟲需要春雨才能成熟並產卵，但今年肯亞和鄰國衣索比亞的降雨減少，
+                  因此蝗蟲仍未成熟，3 月開始蝗蟲數量已經開始下降，如果沒有降雨，這些種群將不會繁殖，
+                  就會有效限制它們的威脅規模和程度。加上現在政府正在對蝗蟲進行各種控制計畫，它們的數量可望繼續下降。
+                  他們樂觀預期，接著進入夏季，原本衣索比亞東北部的降雨就很稀少，將不利蝗蟲繼續繁殖，蝗蟲的總量可望恢復正常。<br><br>
+                  雖然降雨少可能減輕蝗蟲威脅，但乾旱是一面雙面刃，幾乎可以預測今年的農作物收成也不會好。美聯社訪問當地民眾表示，
+                  「收成不好總比沒有好。」對於今年初到達的蝗蟲群，他說「我們很幸運蝗蟲在還沒開始種植農作物的時候就到了，否則它們會把我們的農作物全部銷毀。」<br><br>
+                </div>
+                <div class="modal-footer">
+                  新聞來源：<a href="https://technews.tw/2021/04/09/drought-solve-africa-locust-problem/">https://technews.tw/2021/04/09/drought-solve-africa-locust-problem/</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal fade bd-example-modal-xl" id="news2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <div style="display: block;">
+                    <h3 class="modal-title" id="exampleModalLabel">蝗蟲大軍逼近 印度西5邦已重創</h3>
+                    <h6>作者 小山 | 發布日期 2020 年 05 月 28 日 10:46 |</h6>
+                  </div>
+                  
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+          
+                <div class="modal-body">
+                  正當全球關注於新型冠狀病毒（Coronavirus）之際，漫天飛舞的蝗蟲（locust）大軍，已將強大破壞力帶往印度，將當地大面積糧食作物“一掃而空”，
+                  讓印度頓時陷入嚴重糧食供應危機。此前消息報道印度接壤的巴基斯坦等受蝗蟲威脅嚴重。<br><br>
+                  據上報今天指此為30年來最嚴重，蝗蟲重創印度西部5邦，糧食供應恐陷危機。據《印度斯坦時報》（Hindustan Times）報道稱，足跡遍及東非、
+                  南非、中東與南亞的沙漠蝗蟲，如今讓印度西部5邦再次陷入威脅。<br><br>
+                  根據印度農業部通報，包含旁遮普（Punjab）、馬哈拉施特拉邦（Maharashtra）、拉賈斯坦邦（Rajasthan）、
+                  中央邦（Madhya Pradesh）和古吉拉特邦（Gujarat），都偵測到大群蝗蟲移動，農民也在農地發現蟲卵，讓中央立刻加派人力和裝備，
+                  協助地方打擊威脅。印度農業部官員表示，當前的蝗蟲災情、是近30年來最嚴重的一回，估計至少有5萬公頃的糧食農田會被摧毀，
+                  他們擔心，印度可能會出現1993年以降，最糟糕的糧食短缺危機。<br><br>
+                  據專家稱，“只要8至10隻成蟲，就能吃掉一平方公里的農作物。4000萬隻的蝗蟲，能吃掉3.5萬人的糧食供應。”<br><br>
+                  專家也對印度其他地區提出預警，包含人口最多的北方邦（Uttar Pradesh）和首都德里（Delhi）周邊地區，都是沙漠蝗蟲可能攻擊的範圍。
+                  近期受到豐沛雨量和熱帶氣旋侵襲，為蝗蟲提供了產卵和發育的“絕佳環境”。<br><br>
+                  本次肆虐的蝗蟲，是一種名為“沙漠蝗蟲”（Desert locusts）的品種，一群數千萬隻成蟲每天可飛行150公里距離，對於農作物的破壞力非常驚人。
+                  為了控管蝗蟲的動向，聯合國派出無人機進行追蹤，給予空中灑藥除蟲更精確的建議。<br><br>
+                  該報道說，印度政府將派出無人機，在蝗蟲肆虐的地區進行追蹤和空中噴藥，希望能藉此減少傷害。<br><br>
+                  
+          
+                </div>
+                <div class="modal-footer">
+                  新聞來源：<a href="https://reurl.cc/2b9Ljn">https://reurl.cc/2b9Ljn</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal fade bd-example-modal-xl" id="news3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+              <div class="modal-content">
+          
+                <div class="modal-header">
+                  <div style="display: block;">
+                    <h3 class="modal-title" id="exampleModalLabel">【蝗蟲災害】上海發現蝗蟲藏身貨物 中國6月恐進入蝗災高風險期</h3>
+                    <h6>作者 游 昊雲 | 發布日期 2020 年 04 月 16 日 21:52 |</h6>
+                  </div>
+                  
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+          
+                <div class="modal-body">
+                  新冠肺炎疫情尚未結束，第二波非洲蝗災再來襲。此次非洲蝗蟲數量約為第一波的20倍，目前受災地區主要為東非5國，致使非洲2000萬人陷入困境。
+                  中國農業科學院植物保護研究所研究員張澤華表示，6月中國或進入非洲蝗災高風險期，目前上海海關已經發現有藏在貨物中的蝗蟲，
+                  「說明蝗蟲已經開始敲我們的大門了」。<br><br>
+                  張澤華介紹，並不能簡單地判斷第二波蝗蟲是上一波擴大還是新一波出土。目前的蝗蟲群體中，世代重疊比較嚴重。在今年3月份，
+                  已經發現蝗群中有成蟲。現在新一代出生，兩次疊加，數量也變得非常大。<br>
+                  1隻雌蝗蟲的生命中可產下200-300粒卵，如果全部成活，就意味着每一代會增加100倍以上。受到蝗蟲卵的孵化率、成活率影響，
+                  根據各區域的不同，兩代蝗蟲之間暴增20倍是有可能的。<br><br>
+                  張澤華表示，第二波蝗災已爆發，但目前仍未到最危險的時候。總體來說，當前主要發生在東非5國，真正的危險是牠蔓延開來以後。
+                  根據蝗蟲遷飛的趨勢預測，到了5月份，第一代都孵化後，可能會蔓延到許多地方，一旦造成糧食短缺，就可能引發一系列連鎖反應。<br><br>
+                  他指出，6月是沙漠蝗的遷飛高發期，可能繼續遷飛蔓延至印巴等地。對於中國，蝗災雖然還遠在非洲，但仍不可不防。蝗群遷徙的路線主要有兩條，
+                  一條是北線，從印度河流域隨着西風而來，撞上青藏高原後，沿青藏高原邊緣往南到緬甸等地，隨後視季風情況可能進入雲南、廣西甚至廣東等地。<br><br>
+                  另一條是南線，在印度洋發源的東亞季風，在紅海南段、非洲之角與西風帶的氣流匯合，最終直達雲南。蝗蟲亦有可能隨氣流而到達雲南，
+                  其中南線的風險要比北線更高。他認為，這樣的局面可能在6月份出現，而且此次風險更高。<br><br>
+                  此外，他稱蝗蟲也可通過貨運等方式入境，「那麼小一個蟲子，藏在集裝箱裏，很難發現。目前上海海關已經發現有藏在貨物中的蝗蟲，
+                  說明蝗蟲已經開始敲我們的大門了。」若蝗蟲叩關，中國現有技術是可應對的，但最麻煩的是它不只是過境，而是落地生根住下不走，
+                  那就可能需要長期治理。<br><br>
+                  
+                <div class="modal-footer">
+                  新聞來源：<a href="https://reurl.cc/YWa80l">https://reurl.cc/YWa80l</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal fade bd-example-modal-xl" id="news4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+              <div class="modal-content">
+          
+                <div class="modal-header">
+                  <div style="display: block;">
+                    <h3 class="modal-title" id="exampleModalLabel">印度面臨30年來最嚴重蝗災，主因是印度洋暖化？</h3>
+                    <h6>作者 科技新報    | 發布日期 2020 年 06 月 06 日 16:41 |</h6>
+                  </div>
+                  
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+          
+                <div class="modal-body">
+                  今年全球兩起影響最巨的災難，除了新型冠狀病毒，另一個就是蝗災。去年底聯合國就已發出蝗災警報，當時印度銜接巴基斯坦的地區就出現首批異常蝗蟲群，
+                  今年隨著氣候持續異常及印度正在對抗新冠疫情分身乏術，專家預計今年印度將面臨1993年以來最嚴重的蝗蟲侵襲。<br><br>
+                  蝗蟲對印度來說並不陌生，通常在7~10月間從巴基斯坦抵達，並集中在印度與巴基斯坦接壤的拉賈斯坦邦。然而，
+                  這次天氣條件幫助大批蝗蟲擴散到鄰近地區，整個印度中西部邦都爆發蝗蟲襲擊，在預測風向的情況下，
+                  5月底印度中部地區的德里也發出警報。現在印度只能使用無人機與噴灑殺蟲劑，以及敲鑼打鼓等土法煉鋼方式驅趕蝗蟲。<br><br>
+                  蝗蟲到底有多可怕？牠們不會攻擊人或動物，但認為是世界最具破壞力的遷徙性害蟲，約4000萬隻蝗蟲的小群，就能吞噬3.5萬人的糧食，
+                  而一群覆蓋1公里的蝗蟲可能多達8000萬隻。截至5月初，至少有10群蝗蟲正在侵蝕印度的農田，現在還在巴基斯坦和索馬利亞半島的蝗蟲更多，
+                  可能6月就到達印度。<br><br>
+                  專家認為，這次規模更大、遷徙範圍更遠的蝗蟲災害，是自2019年底印度洋西部的溫暖海水，帶動東非和阿拉伯半島的大量降雨之後開始的。
+                  因此推測印度洋的變暖模式可能是觸發因素。<br><br>
+                  這種現象稱為印度洋偶極子（Indian Ocean Dipole），正偶極子是指印度洋西部地區比東部地區高攝氏1度以上。去年，
+                  印度洋出現最強的正偶極子，相差超過攝氏2度，為印度帶來幾十年來最大雨量。西亞阿曼、葉門和索馬利亞半島的部分地區也持續降雨，
+                  大雨促使乾旱地區植物生長，讓沙漠蝗蟲生長繁殖，加上風向幫助大群蝗蟲在伊朗、阿富汗、巴基斯坦和印度的土地飛行和繁殖。<br><br>
+                  聯合國專門機構糧食及農業組織一直發出關於種群發展的警報。2020年2月蝗蟲爆發，索馬利亞隨即宣布進入緊急狀態，
+                  而巴基斯坦於今年4月第二次宣布進入緊急狀態。這些蝗蟲約在4月抵達印度西部，比正常的7~10月要早得多。專家警告，
+                  如果到6月季風季節正值水稻、甘蔗、棉花和其他農作物的新播種季節到來之前不停歇，作物將造成巨大損失。<br><br>
+                  為了這次蝗災，印度指責巴基斯坦沒有及早抑制蝗蟲繁殖，但聯合國糧農組織認為，儘管多年來缺乏資金和監測不足是問題，
+                  但今年新型冠狀病毒大流行，讓政府忽略了蝗蟲也是很大因素。全國封鎖讓農藥供應及運輸變困難，勞動力也出現短缺，
+                  可能會影響農藥噴灑操作，結果使蝗蟲有繁衍機會。<br><br>
+                  蝗災通常遵循一到兩年的週期，此後會有八到九年的平靜期。但隨著海洋變暖的總體趨勢，強烈的印度洋偶極子有望更頻繁，
+                  未來蝗蟲大軍恐怕不會幾年才來一次。<br><br>
+          
+                  
+                </div>
+                <div class="modal-footer">
+                  新聞來源：<a href="https://www.gvm.com.tw/article/73078">https://www.gvm.com.tw/article/73078</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal fade bd-example-modal-xl" id="news5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+              <div class="modal-content">
+          
+                <div class="modal-header">
+                  <div style="display: block;">
+                    <h3 class="modal-title" id="exampleModalLabel">水旱災、疫情、蝗害接連侵襲 外媒曝中國糧食危機現況</h3>
+                    <h6>作者 黃 嬿 | 發布日期 2021 年 09 月 05 日 12:01|</h6>
+                  </div>
+                  
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+          
+                <div class="modal-body">
+                  〔即時新聞／綜合報導〕中國當前面臨嚴重的糧食危機，國家主席習近平上月下令禁止浪費食物，
+                  外媒指出，繼武漢肺炎（新型冠狀病毒病，COVID-19）疫情、沙漠蝗蟲及梅雨重災後，目前中國又面臨新種蝗災，
+                  糧食危機恐越演越烈。<br><br>
+                  根據美國《自由亞洲電台》報導，年中以來，蝗災不斷騷擾著中國，最初是從撒哈拉地區移入的沙漠蝗蟲，
+                  在今年春季異常降雨影響下爆量繁殖，一路遷徙至亞洲地區，為周邊各國農業構成威脅。近期則是黃脊竹蝗的昆蟲從西南邊境移入，
+                  導致雲南遭遇數十年來最嚴重蝗害。<br><br>
+                  《自由亞洲電台》指出，此次黃脊竹蝗主要從寮國移入，由於該國欠缺足夠設備及藥物來消滅害蟲，無法有效限制其族群增長，
+                  且在疫情影響下，中國農業專家也無法前往災區處理，導致災情越來越嚴重。<br><br>
+                  報導分析，蝗災與水、旱災並稱中國三大自然災害，今年該國已先後經歷嚴重水災、旱災及多番蝗災，再加上疫情影響，
+                  局部地區糧食已出現減產，未來可能出現絕產的困境，綜合考量非洲豬瘟帶來豬肉產量驟降及國際供應鏈短缺等因素，
+                  中國恐迎來近年最嚴重的糧食危機。<br><br>
+                  
+          
+                </div>
+                <div class="modal-footer">
+                  新聞來源：<a href="https://news.ltn.com.tw/news/world/breakingnews/3282336">https://news.ltn.com.tw/news/world/breakingnews/3282336</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal fade bd-example-modal-xl" id="news6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+              <div class="modal-content">
+          
+                <div class="modal-header">
+                  <div style="display: block;">
+                    <h3 class="modal-title" id="exampleModalLabel">東非蝗災越演越烈，大批沙漠蝗蟲已入侵印度</h3>
+                    <h6>作者 黃 敬哲 | 發布日期 2020 年 02 月 14 日 14:13 |</h6>
+                  </div>
+                  
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+          
+                <div class="modal-body">
+                  聯合國糧食及農業組織（FAO）警告，來自非洲之角（Horn of Africa）地區的沙漠蝗蟲仍在繼續繁殖並擴大規模，
+                  在近期將形成新的群體，對東非形成嚴重的糧食威脅。不少意見認為，這是氣候變異所導致的。<br><br>
+                  這可能是東非地區 25 年以來最嚴重的一次蝗蟲災害，3,600 多億隻蝗蟲不僅席捲索馬利亞、肯亞及衣索比亞，更將迅速湧入其他國家。
+                  聯合國糧食及農業組織（FAO）警告，來自非洲之角（Horn of Africa）地區的沙漠蝗蟲仍在繼續繁殖並擴大規模，
+                  在近期將形成新的群體，對東非形成嚴重的糧食威脅。不少意見認為，這是氣候變異所導致的。<br><br>
+                  雖然當地的政府及組織已採取控制行動，但仍有新的種群正在孵化，由於雨季到來為蝗蟲繁殖創造了更有利的生存條件，
+                  鄰近的烏干達、南蘇丹及坦桑尼亞都已受到波及。且據消息指出，這些非洲國家仍缺乏足夠的化學藥劑來抑制蝗災，
+                  如陶斯松（Chlorpyrifos）與賽滅寧（Cypermethrin），希望盡快與國際供應商取得聯繫。<br><br>
+                  <h3 style="color: brown;">蝗災東遷</h3>
+                  沙漠蝗蟲做為最兇猛的品種，也一直以來都是非洲糧食最大的威脅，這種蝗蟲不僅一天能飛越近 150 公里的距離，
+                  且每年甚至可以誕生 5 代種群。每隻體長約 6～7 公分，數以千億計的數量，估計每日能消耗掉近 3.5 萬人份糧食，
+                  在去年底在衣索比亞和索馬利亞邊境出現後，就迅速擴散至各地區。<br><br>
+                  且目前數量還在激增當中，約 3~4 週就可成長 20 倍，破壞力相當驚人。聯合國糧食及農業組織（FAO）已發出警告，
+                  若無法在 3 月以前控制當下這波蝗蟲，到 6 月預計數量將會暴增到 500 倍。雖然 FAO 已向國際請求 7,600 萬美元捐款，以擴大除蟲行動，
+                  但如今募款進度不如預期，預計嚴重災區今年難以逃避飢荒。<br><br>
+                  不僅如此，蝗災正一路向東蔓延，已越過中東半島，甚至在今年初進入巴基斯坦和印度地區。巴基斯坦政府已宣佈全國進入緊急狀態，
+                  而印度也有近 37 萬公頃農田遭殃，已造成上百億盧比的經濟損失。雖然據中媒報導，如中國農業大學教授張龍認為，此次蝗災不會蔓延至中國，
+                  因為受限於中國與印巴地區接壤的地形，蝗蟲很難越過高海拔的寒冷地區。<br><br>
+                  然而目前中國市場已開始密切關注此消息，不少糧食類股開始集體漲停，可能成為武漢肺炎疫情之外，衝擊經濟的另外一個風險。
+                  有悲觀的意見認為，若印度抗擊蝗災不力，未來席捲整個東南亞都是有可能的，雖然大部分輿論對於中國防治蟲害能力有信心，
+                  但若災害繼續蔓延，仍會受到波及。<br><br>
+                  
+          
+                </div>
+                <div class="modal-footer">
+                  新聞來源：<a href="https://technews.tw/2020/02/14/east-africa-locust-plague-is-intensifying-a-large-number-of-desert-locusts-have-invaded-india/">https://technews.tw/2020/02/14/east-africa-locust-plague-is-intensifying-a-large-number-of-desert-locusts-have-invaded-india/</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal fade bd-example-modal-xl" id="news7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+              <div class="modal-content">
+          
+                <div class="modal-header">
+                  <div style="display: block;">
+                    <h3 class="modal-title" id="exampleModalLabel">【東非蝗災】沙漠蝗蟲有多可怕？專家：蝗蟲災害恐更常見</h3>
+                    <h6>作者 鄧 燕君 | 發布日期 2020 年 02 月 17 日 16:41 |</h6>
+                  </div>
+                  
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+          
+                <div class="modal-body">
+                  東非蝗災肆虐，大部分地區遭大量沙漠蝗蟲侵襲，威脅糧食安全。專家預測，蝗災在未來恐怕只會愈來愈常見。聯合國警告，
+                  蝗蟲在糧食安全脆弱的索馬里、埃塞俄比亞和肯亞破壞農作物，已出現糧食危機。蝗災不僅於非洲發生，
+                  沙特阿拉伯和巴基斯坦亦湧現蝗蟲。<br><br>
+                  <h4 style="color: brown;">蝗災規模有多大？</h4>
+                  沙漠蝗蟲是蝗科中一種短角蝗蟲，當一隻沙漠蝗蟲單獨生活時，其顏色是淺棕色，破壞力相對較小。<br>
+                  不過，若環境有利，尤其在大雨和颶風後，大量蝗蟲聚集在同一個地方，它們的顏色變為粉紅色（未成熟），
+                  再變黃色（成熟），形成蟲群。這過程被稱為「群聚化」（gregarisation）。<br><br>
+                  <h4 style="color: brown;">如何預防蝗災？</h4>
+                  目前未有有效的方法預防蝗災，因難以預測蝗災何時、何地發生，蝗蟲的移動路徑也很難預測，它們在遼闊、偏遠地區移動速度非常快。<br>
+                  人類可用飛機和無人機對蝗蟲群噴灑農藥，最好的策略是在蝗蟲群形成前，開始噴灑農藥。西非的毛里塔尼亞（Mauritania）以這個「先發制人」的方法應對蝗災，
+                  獲外界肯定和讚賞。<br><br>
+                  <h4 style="color: brown;">將來會怎樣？</h4>
+                  暴雨為蝗蟲建造了理想的繁殖環境，索馬里外海日前出現颶風，招來蝗蟲群。部分氣象預測員估計，印度洋氣旋產生的頻率增加，或因全球暖化，
+                  而這種現象恐怕導致非洲未來將出現更多蝗蟲群，而且次數相信更頻密。<br><br>
+                  
+                </div>
+                <div class="modal-footer">
+                  新聞來源：<a href="https://reurl.cc/YWa80l">https://reurl.cc/YWa80l</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+          
+          
+          <div class="modal fade bd-example-modal-xl" id="news8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+              <div class="modal-content">
+          
+                <div class="modal-header">
+                  <div style="display: block;">
+                    <h3 class="modal-title" id="exampleModalLabel">【蝗蝗不安】從東非蝗災看蝗蟲如何成為威脅全球糧食安全的災害？</h3>
+                    <h6>作者 楊 正澤    | 發布日期 2020 年 04 月 12 日 19:23 |</h6>
+                  </div>
+                  
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+          
+                <div class="modal-body">
+                  聯合國糧食及農業組織（FAO）將2020年定調為植物健康年，卻不料2月底東非爆發一場25年來前所未見的嚴重蝗災，
+                  大範圍地影響東非30國，當地各國政府甚至公告進入「國家緊急狀態」，與此同時，FAO亦宣布東非蝗災進入橙色警戒。<br><br>
+                  根據FAO Save and Grow（2011）在小農作物生產永續集約化政策制定者手冊的數據顯示，飛蝗每年造成作物損失僅占0.2%，
+                  遠遠小於由病蟲害所造成的30～40%農損，那為什麼飛蝗還被認定是史上威脅全球糧食最大蟲害？其原因在於，
+                  全世界已知的20種飛蝗中，亞洲及非洲等常見7種飛蝗幾乎都曾釀成蝗災，且數年一次的大規模遷飛以及每年的小規模蝗災，
+                  也都是造成當地重大農業損失的關鍵因素。<br><br>
+                  <h4 style="color: brown;">飛蝗是會轉型的多態性蝗蟲</h4>
+                  蝗蟲是昆蟲綱直翅目的3大昆蟲支系之一，分類系統上稱為蝗亞目（Acridoidea）或善跳類（Caelifera），
+                  外觀形態主要特徵是前翅稍厚，革質，稱翅覆（tegmen)；後足發達，翅脈平直，得名直翅目Orthoptera。<br><br>
+                  依照遷移行為學特性，蝗亞目大致分為兩大群：其一是熟知的蝗蟲（grasshoppers），值得一提的是，
+                  臺灣也曾有蝗蟲危害農作物的記錄，如曾出現於澎湖的條背土蝗Patanga succincta （Johansson, 1763），
+                  根據歷史記載13～15年即大發生一次，造成的危害屬於區域性，根據蔡金池1996年報告，條背土蝗大發生時，
+                  政府曾以每公斤200元收購3000公斤，卻仍無法避免農作物廣泛性受災。<br><br>
+                  其二是飛蝗（locusts），飛蝗也是蝗蟲，只是具有多態性（polyphenism），同一族群內的個體，發育過程會受外在環境的影響，
+                  由散居型（solitary phase）轉變為聚集型（gregarious phase），例如沙漠飛蝗Schistocerca gregaria （Forskael, 1775）
+                  分布在非洲大陸惡劣與次惡劣地區，經過數年乾旱後遇季節性降雨，族群增長快速，飛蝗為食物而大量聚集，族群密度因此陡升，
+                  Roffey & Bopov 1986年證實散居型飛蝗若蟲在發育過程中，因族群密度激增，擁擠效應誘發型態轉變（transformation），
+                  老熟若蟲在適當棲所，安定後數天開始成熟，羽化為成蟲，初羽化體色由紅黑轉為黃色，開始交配，然後再產卵，如此代代累積，
+                  發展為聚集型。<br><br>
+                  聚集成蝗蟲大軍的成蟲群（swarm）每平方公里多達50億隻，每天可以200公里的長距離遷飛，進而造成蝗災。且除了龐大的群體優勢之外，
+                  最近中國科學院康樂院士團隊更研究發現，聚集型的飛蝗，其體液及某些組織中含有大量具毒性氰化物（HCN）的前驅物苯乙腈（phenylacetonitrile, PAN），
+                  推測可藉以躲避天敵。<br><br>
+                  <h4 style="color: brown;">沙漠飛蝗他山之石，東亞飛蝗在臺滅蹤超過一甲子</h4>
+                  聯合國糧農組織定義蝗蟲入侵等級達到「數量激增」（upsurge），也就是大範圍受到影響，且情勢加劇又未獲控制時間達1年以上，即為蝗災（plague of locusts），
+                  除南極洲外，全球各大陸塊都可能發生蝗災，在此簡單介紹兩大重要的飛蝗。<br><br>
+                  非洲有最嚴重的沙漠飛蝗Schistoterca gregaria，生育地範圍由大西洋到印度西北，老熟若蟲找到棲所，安定後數天開始性成熟，
+                  羽化為成蟲體色轉黃色，開始交配，然後產卵，其擴散面積可達 2800萬平方公里；亞洲則有亞洲飛蝗Locusta migratoria 
+                  （Linnaeus, 1758），在中國大陸危害較大。聚焦臺灣，威脅最大的是東亞飛蝗或稱菲律賓飛蝗Locusta migratoria manilensis 
+                  （Meyen, 1835）。<br><br>
+                  針對這個種類，1997年我曾為IUCN\SSC直翅類專家群整理過一篇短文，回顧文獻過程發現，貢穀紳(1994 )報告在1945～1990年間，
+                  東亞飛蝗已不再是臺灣的甘蔗重要害蟲，各改良場及相關監測記錄沒有資料，或者可大膽地說沒記錄了，且在後續的分類學與生態資源調查、
+                  採集、害蟲防疫記錄，也未見東亞飛蝗名列其中。<br><br>
+                  蔡承豪博士（2008: 2013）兩篇論文回溯臺灣對於東亞飛蝗最早記錄可能落在1653～1655年，接著有詳細記載的則是1896～1897年，
+                  根據歷史資料推測可能是6月由菲律賓隨西南季風及黑潮效應產生的氣流而來，降落在恆春半島或臺灣東部，落地後轉向北，向東往日本沖繩，
+                  再折返西進入臺灣北部，如大臺北、基隆，接著一路往南至桃竹苗、雲林再到嘉南。對於行進路線，另有一說是由屏東恆春轉澎湖，
+                  但尚且存疑，需以文獻考證與現地採集或以蒐藏標本檢查方式，深入探討。<br><br>
+                  
+                <div class="modal-footer">
+                  新聞來源：<a href="https://www.agriharvest.tw/archives/37039">https://www.agriharvest.tw/archives/37039</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery-3.6.0.js"></script>
+    <script>
+        $(".nav-link").hover(
+            function (event) {
+                $(this).toggleClass("bg-light text-dark");
+            },
+            function (event) {
+                $(this).toggleClass("bg-light text-dark");
+            }
+        );
+        let t = $("#a").offset().top;
+        $("#about").click(() => {
+          window.scrollTo(0, 0);
+        });
+        $("#news").click(() => {
+          window.scrollTo(0, $("#n").offset().top - t);
+        });
+        $("#map").click(() => {
+          window.scrollTo(0, $("#m").offset().top - t);
+        });
+        $("#report").click(() => {
+          window.scrollTo(0, $("#r").offset().top - t);
+        });
+    </script>
+</body>
+</html>
